@@ -1,0 +1,76 @@
+{
+    "configuration": {
+        "arch_config": "/home/farabi/study/research/multitree-sim/src/SCALE-Sim/configs/express.cfg",
+        "num_hmcs": 16,
+        "num_vaults": 16,
+        "mini_batch_size": 256,
+        "network": "/home/farabi/study/research/multitree-sim/src/SCALE-Sim/topologies/mlperf/Transformer_short.csv",
+        "run_name": "Transformer_short",
+        "outdir": "/home/farabi/study/research/multitree-sim/results/mesh_logs/outputs/Transformer_short",
+        "dump": false,
+        "allreduce": "ring",
+        "kary": 2,
+        "radix": 1,
+        "booksim_config": "/home/farabi/study/research/multitree-sim/src/booksim2/runfiles/mesh44express.cfg",
+        "booksim_network": "mesh",
+        "bigraph_m": 4,
+        "bigraph_n": 8,
+        "enable_logger": [],
+        "verbose": false,
+        "only_compute": false,
+        "only_allreduce": false,
+        "only_reduce_scatter": false,
+        "only_all_gather": false,
+        "message_buffer_size": 32,
+        "message_size": 256,
+        "sub_message_size": 256,
+        "strict_schedule": false,
+        "prioritize_schedule": false,
+        "oracle_lockstep": false,
+        "estimate_lockstep": false,
+        "synthetic_data_size": 0,
+        "logdir": "/home/farabi/study/research/multitree-sim/results/mesh_logs",
+        "pe_array_height": 32,
+        "pe_array_width": 32,
+        "ifmap_sram_size": 524288,
+        "filter_sram_size": 524288,
+        "ofmap_sram_size": 262144,
+        "ifmap_offset": 0,
+        "filter_offset": 10000000,
+        "ofmap_offset": 20000000,
+        "ifmap_grad_offset": 40000000,
+        "filter_grad_offset": 50000000,
+        "ofmap_grad_offset": 30000000,
+        "data_flow": "os",
+        "nodes": 16
+    },
+    "results": {
+        "performance": {
+            "training": 1928487,
+            "allreduce": {
+                "computation": 73200,
+                "communication": 1246366,
+                "total": 1319566
+            },
+            "total": 3248053
+        },
+        "power": {
+            "network": {
+                "dynamic": 0.5576343160437286,
+                "static": 2.931564465307014,
+                "total": 3.489198781350743,
+                "router": {
+                    "dynamic": 0.4944512690593221,
+                    "static": 2.929789381787014,
+                    "total": 3.424240650846336
+                },
+                "link": {
+                    "dynamic": 0.06318304698440656,
+                    "static": 0.0017750835199999986,
+                    "total": 0.06495813050440656,
+                    "flits": 19861440
+                }
+            }
+        }
+    }
+}

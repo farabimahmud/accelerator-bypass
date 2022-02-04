@@ -1,0 +1,76 @@
+{
+    "configuration": {
+        "arch_config": "/home/farabi/study/research/multitree-sim/src/SCALE-Sim/configs/express.cfg",
+        "num_hmcs": 16,
+        "num_vaults": 16,
+        "mini_batch_size": 256,
+        "network": "/home/farabi/study/research/multitree-sim/src/SCALE-Sim/topologies/mlperf/AlphaGoZero.csv",
+        "run_name": "AlphaGoZero",
+        "outdir": "/home/farabi/study/research/multitree-sim/results/mesh_logs/outputs/AlphaGoZero",
+        "dump": false,
+        "allreduce": "ring",
+        "kary": 2,
+        "radix": 1,
+        "booksim_config": "/home/farabi/study/research/multitree-sim/src/booksim2/runfiles/mesh16x16express.cfg",
+        "booksim_network": "mesh",
+        "bigraph_m": 4,
+        "bigraph_n": 8,
+        "enable_logger": [],
+        "verbose": false,
+        "only_compute": false,
+        "only_allreduce": false,
+        "only_reduce_scatter": false,
+        "only_all_gather": false,
+        "message_buffer_size": 32,
+        "message_size": 256,
+        "sub_message_size": 256,
+        "strict_schedule": false,
+        "prioritize_schedule": false,
+        "oracle_lockstep": false,
+        "estimate_lockstep": false,
+        "synthetic_data_size": 0,
+        "logdir": "/home/farabi/study/research/multitree-sim/results/mesh_logs",
+        "pe_array_height": 32,
+        "pe_array_width": 32,
+        "ifmap_sram_size": 524288,
+        "filter_sram_size": 524288,
+        "ofmap_sram_size": 262144,
+        "ifmap_offset": 0,
+        "filter_offset": 10000000,
+        "ofmap_offset": 20000000,
+        "ifmap_grad_offset": 40000000,
+        "filter_grad_offset": 50000000,
+        "ofmap_grad_offset": 30000000,
+        "data_flow": "os",
+        "nodes": 16
+    },
+    "results": {
+        "performance": {
+            "training": 1297950,
+            "allreduce": {
+                "computation": 46320,
+                "communication": 2162523,
+                "total": 2208843
+            },
+            "total": 3506793
+        },
+        "power": {
+            "network": {
+                "dynamic": 1.8931029458738684,
+                "static": 46.90503144491241,
+                "total": 48.79813439078628,
+                "router": {
+                    "dynamic": 1.856148487149296,
+                    "static": 46.87663010859241,
+                    "total": 48.732778595741706
+                },
+                "link": {
+                    "dynamic": 0.0369544587245725,
+                    "static": 0.028401336319999974,
+                    "total": 0.06535579504457248,
+                    "flits": 36058020
+                }
+            }
+        }
+    }
+}
